@@ -1,0 +1,1 @@
+function a(){const fs=require('fs');try{const data=fs.readFileSync('dict.txt','utf8');return(data.split("\n")[Math.floor((Math.random()*data.split("\n").length)+1)])}catch(err){return(err)}} // this mess of a function returns a random word, which is used in hangman

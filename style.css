@@ -1,0 +1,16 @@
+@font-face {
+    /* load the Alloy Ink font */
+    font-family: "Alloy Ink";
+    src        : url(fonts/AlloyInk-nRLyO.ttf) format("truetype"),
+                 url(fonts/AlloyInk-lgdWw.otf) format("opentype");
+}
+
+.letterButton {
+    /* and style the buttons */
+    font-family       : "Alloy Ink";
+    border-radius     : 20px;
+    border-style      : none;
+    margin            : 3px;
+    font-size         : 45px;
+    padding: 10px;
+}
