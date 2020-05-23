@@ -5,7 +5,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Hangman</title>
-    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="wordFunctions.js"></script>
@@ -30,6 +29,11 @@
         // I use it in the buttons, but it would be absurd to list it each time, so I am just noting
         // the attribution here, and know that it is used in the buttons
         // s.substring(0, index) + 'x' + s.substring(index + 1);
+        function checkGameOver() {
+            if(document.getElementById('guessCounter').innerHTML == 0) {
+                alert('Game over!');
+            }
+        }
     </script>
     Guess a letter:<br>
     <!-- This contains the buttons that go with the letters -->
@@ -39,7 +43,7 @@
             if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}
 
             // and if they have zero guesses left, tell them Game Over
-            if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}
+            checkGameOver();
 
             // for each letter in the word
             for(var i = 0; i<word.length; i++) {
@@ -52,56 +56,55 @@
             }">A</button>
         <!-- Yes, yes, I know that embeding the JS in every element is a MESS, but I couldn't think of a better way (I don't thing functions would work, as we need to have `this`.) -->
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">B</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">B</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">C</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">C</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">D</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">D</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">E</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">E</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">F</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">F</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">G</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">G</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">H</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">H</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">I</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">I</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">J</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">J</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">K</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">K</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">L</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">L</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">M</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">M</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">N</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">N</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">O</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">O</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">P</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">P</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">Q</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">Q</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">R</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">R</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">S</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">S</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">T</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">T</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">U</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">U</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">V</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">V</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">W</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">W</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">X</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">X</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">Y</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">Y</button>
         <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}if(document.getElementById('guessCounter').innerHTML==0){alert('Game over!');}">Z</button>
+            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">Z</button>
     </div>
 </body>
-
 </html>
