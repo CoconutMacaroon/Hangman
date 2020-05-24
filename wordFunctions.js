@@ -1,1 +1,15 @@
-function a(){const fs=require('fs');try{const data=fs.readFileSync('dict.txt','utf8');return(data.split("\n")[Math.floor((Math.random()*data.split("\n").length)+1)])}catch(err){return(err)}} // this mess of a function returns a random word, which is used in hangman
+function a() {
+    const fs = require("fs");
+    try {
+        const data = fs.readFileSync("dict.txt", "utf8");
+
+        // convert data to array
+        return data.split("\n")[
+            // and then pick a random word
+            Math.floor(Math.random() * data.split("\n").length + 1)
+        ];
+    } catch (err) {
+        // and if something fails, instead return the error
+        return err;
+    }
+}
