@@ -4,7 +4,7 @@ This is my Hangman game (and because I wanted to learn Electron)
 
 ## Contributing
 
-Pull requests are always welcome. However, for bigger changes, consider making an issue for discussion instead. One small thing. Please maintain the code style of the project.
+Pull requests are always welcome. However, for bigger changes, consider making an issue for discussion instead. One small thing. Please maintain the code style of the project. For issues, please do NOT add the bug label unless you can explain how to reproduce the issue. Instead, add the needs-reproduction label to signify that it ins't yet confirmed.
 
 ### Code style
 
