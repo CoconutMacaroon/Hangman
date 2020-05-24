@@ -1,4 +1,4 @@
-function a() {
+function getRandomWord() {
     const fs = require("fs");
     try {
         const data = fs.readFileSync("dict.txt", "utf8");
