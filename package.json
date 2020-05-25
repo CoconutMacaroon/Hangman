@@ -1,8 +1,12 @@
 {
     "name": "hangman",
+    "productName": "Hangman",
     "version": "0.1.0",
     "main": "main.js",
     "scripts": {
         "start": "electron ."
+    },
+    "dependencies": {
+        "electron": "^8.2.5"
     }
 }
