@@ -27,7 +27,7 @@ function createWindow() {
     // We don't want the Dev Tools to auto-open
     // but Ctrl-Shift-I still opens them in case
     // they are needed when debugging
-    //win.webContents.openDevTools(
+    win.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished

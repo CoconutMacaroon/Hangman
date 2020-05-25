@@ -22,13 +22,9 @@
         console.log(word); // write to the console, this is the equavalent-ish of print() in python
 
         
-        document.getElementById('guessCounter').innerHTML = 8 - 0
-        document.getElementById("guessingWord").innerHTML = "-".repeat(word.length);
+        document.getElementById('guessCounter').innerHTML = 8
+        document.getElementById("guessingWord").innerHTML = "-".repeat(word.length - 1);
 
-        // thanks a ton to Stack Overflow for this snippet: https://stackoverflow.com/a/1431109
-        // I use it in the buttons, but it would be absurd to list it each time, so I am just noting
-        // the attribution here, and know that it is used in the buttons
-        // s.substring(0, index) + 'x' + s.substring(index + 1);
         function checkGameOver() {
             if(document.getElementById('guessCounter').innerHTML == 0) {
                 alert('Game over!');
@@ -46,12 +42,12 @@
             checkGameOver();
 
             // for each letter in the word
-            for(var i = 0; i<word.length; i++) {
+            for(var i = 0; i<word.length - 1; i++) {
                 // if the button letter (e.g. A or B) is the same as the current letter
-                if(this.innerHTML == word[i])
+                if(this.innerHTML.toLowerCase() == word[i])
                 {
                     // replace the - with the letter. in other words, reveal that letter
-                    document.getElementById('guessingWord').innerHTML = document.getElementById('guessingWord').innerHTML.substring(0, i) + this.innerHTML + document.getElementById('guessingWord').innerHTML.substring(i + 1);
+                    document.getElementById('guessingWord').innerHTML = document.getElementById('guessingWord').innerHTML.replaceAt(i, this.innerHTML)
                 }
             }">A</button>
         <!-- Yes, yes, I know that embeding the JS in every element is a MESS, but I couldn't think of a better way (I don't thing functions would work, as we need to have `this`.) -->
