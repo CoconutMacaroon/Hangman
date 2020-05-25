@@ -20,87 +20,71 @@
     <script>
         var word = getRandomWord(); // create a variable
         console.log(word); // write to the console, this is the equavalent-ish of print() in python
-
         
-        document.getElementById('guessCounter').innerHTML = 8
+        document.getElementById('guessCounter').innerHTML = 10
         document.getElementById("guessingWord").innerHTML = "-".repeat(word.length - 1);
 
-        function checkGameOver() {
+        function buttonClickLogic() {
+            // disable the button
+            this.disabled = true;
+            
+            // lower the guess counter
+            if(document.getElementById('guessCounter').innerHTML > 0) {
+                document.getElementById('guessCounter').innerHTML--;
+            }
+
+            // check to see if the game is over
             if(document.getElementById('guessCounter').innerHTML == 0) {
-                alert('Game over!');
+                alert("You lose!");
+                window.close();
+            }
+
+            // for each letter in the word
+            for(var i = 0; i < word.length - 1; i++) {
+                // if the current letter (in the word) matches the buttons's letter
+                if(this.innerHTML.toLowerCase() == word[i]) {
+                    // change the hyphen from guessingWord to be the button's letter
+                    document.getElementById('guessingWord').innerHTML=document.getElementById('guessingWord').innerHTML.replaceAt(i, this.innerHTML.toLowerCase());
+                }
+            }
+
+            if(document.getElementById("guessingWord").innerHTML.replace(/[^-]/g, "").length == 0) {
+                // for the conditional, this was (slightly modified) from https://stackoverflow.com/a/2903549
+                alert("You won!");
+                window.close();
             }
         }
     </script>
     Guess a letter:<br>
     <!-- This contains the buttons that go with the letters -->
     <div>
-        <button class="letterButton" onclick="this.disabled=true;
-            // subtract one from the guessCounter HTML element
-            if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}
-
-            // and if they have zero guesses left, tell them Game Over
-            checkGameOver();
-
-            // for each letter in the word
-            for(var i = 0; i<word.length - 1; i++) {
-                // if the button letter (e.g. A or B) is the same as the current letter
-                if(this.innerHTML.toLowerCase() == word[i])
-                {
-                    // replace the - with the letter. in other words, reveal that letter
-                    document.getElementById('guessingWord').innerHTML = document.getElementById('guessingWord').innerHTML.replaceAt(i, this.innerHTML)
-                }
-            }">A</button>
-        <!-- Yes, yes, I know that embeding the JS in every element is a MESS, but I couldn't think of a better way (I don't thing functions would work, as we need to have `this`.) -->
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">B</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">C</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">D</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">E</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">F</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">G</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">H</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">I</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">J</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">K</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">L</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">M</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">N</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">O</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">P</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">Q</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">R</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">S</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">T</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">U</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">V</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">W</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">X</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">Y</button>
-        <button class="letterButton"
-            onclick="this.disabled=true;if(document.getElementById('guessCounter').innerHTML>0){document.getElementById('guessCounter').innerHTML--;}checkGameOver();">Z</button>
+        <!-- To add some information, `buttonClickLogic.bind(this)() calls that function in the context of the button, in other words, it calls that function as if the code was directly in the button element. Also, although modified to fit this, thanks to https://stackoverflow.com/a/20635010 for explainning how to not have the code in every single button (and make it a function) -->
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">A</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">B</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">C</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">D</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">E</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">F</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">G</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">H</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">I</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">J</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">K</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">L</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">M</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">N</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">O</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">P</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">Q</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">R</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">S</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">T</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">U</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">V</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">W</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">X</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">Y</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">Z</button>
     </div>
 </body>
 </html>
