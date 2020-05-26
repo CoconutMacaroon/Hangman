@@ -6,6 +6,24 @@ This is my Hangman game (and because I wanted to learn Electron)
 
 Pull requests are always welcome. However, for bigger changes, consider making an issue for discussion instead. One small thing. Please maintain the code style of the project. For issues, please do NOT add the bug label unless you can explain how to reproduce the issue. Instead, add the needs-reproduction label to signify that it ins't yet confirmed.
 
+## Downloading
+
+### Pre-built binaries (recomended)
+
+Go to the releases tab and download the latest releast for your platform.
+
+### Running from source
+
+> NOTE: This is always the latest changes, so it is NOT recomended if you don't have experiance with npm/node.js. This is for running it via `npm`.
+
+Clone the repo. Go into the repo (in a shell). Run `npm install` and run `npm start`. This will run the app.
+
+### Building from source
+
+> NOTE: This is always the latest changes, so it is NOT recomended if you don't have experiance with npm/node.js. This is also how to BUILD this into a executable, not run it from source.
+
+Clone the repo. Go into the repo (in a shell). Run `npm install`. This is IMPORTANT. Then run `electron-packager .`. This will take some time, and then there will be an folder called something like `Hangman-win32-x64`, which is where the .exe is. Specifically, `Hangman.exe` is the game.
+
 ### Releasing
 
 This uses `electron-packager` to generate binaries. However, it is VERY IMPORTANT that you ADD `dict.txt` file in the folder with the .exe. Once a relese is published, it may not be modifyed. However, if there is a significant flaw (like a major security bug or a significant part of the game not working) a NOTICE may be added to the downlaod. But the download shouldn't change.
