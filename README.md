@@ -22,7 +22,7 @@ Clone the repo. Go into the repo (in a shell). Run `npm install` and run `npm st
 
 > NOTE: This is always the latest changes, so it is NOT recomended if you don't have experiance with npm/node.js. This is also how to BUILD this into a executable, not run it from source.
 
-Clone the repo. Go into the repo (in a shell). Run `npm install`. This is IMPORTANT. Then run `electron-packager .`. This will take some time, and then there will be an folder called something like `Hangman-win32-x64`, which is where the .exe is. Specifically, `Hangman.exe` is the game.
+Clone the repo. Go into the repo (in a shell). Run `npm install`. This is IMPORTANT. Then run `electron-packager . --extra-resource="resources/dict.txt"`. This will take some time, and then there will be an folder called something like `Hangman-win32-x64`, which is where the .exe is. Specifically, `Hangman.exe` is the game.
 
 ### Releasing
 
