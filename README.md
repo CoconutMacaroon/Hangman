@@ -29,4 +29,4 @@ Contributions should follow this style:
 
 #### Game doesn't display `guessingWord` (the hyphens) when using the .zip download
 
-This is because the zip doesn't contain the `dict.txt` file needed for picking words. The workaround is to download the `dict.txt` file form the repo and add it to the folder with `Hangman.exe`. Downloading version 1.1 fixes theis issue.
+This is because the zip doesn't contain the `dict.txt` file needed for picking words. The workaround is to download the `dict.txt` file form the repo and add it to the folder with `Hangman.exe`. Downloading version 1.1 fixes this issue.
