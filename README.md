@@ -8,9 +8,17 @@ Pull requests are always welcome. However, for bigger changes, consider making a
 
 ## Downloading
 
-### Pre-built binaries (recomended)
+### Pre-built binaries (portable)
 
 Go to the releases tab and download the latest releast for your platform.
+
+### Binary installer (recommended)
+
+> Note to devs internally, the script downloads the portable version, installs it to AppData, and adds it to the start menu
+
+Download the PowerShell installer script from the releases page. Run it. It will go install the app. You will need to reboot your computer for it to show up (although for those advanced users, restarting `explorer` should also work.
+
+> Note about the script: not everyone is OK with downloading and running a script from online. (1) A few things to note here: you can open it in a text editor (like Notepad) to see exactly what it does. (2) You can always compare it against the version in the repo (although you might notice slight changes, as the repo always has the latest version, especially if you use an older release. (3) If you still don't want to, you can download the portable version, and install it manually by copying and creating shortcuts completely without the PowerShell script. That said, it is just to assist in installation.)
 
 ### Running from source
 
@@ -24,15 +32,15 @@ Clone the repo. Go into the repo (in a shell). Run `npm install` and run `npm st
 
 Clone the repo. Go into the repo (in a shell). Run `npm install`. This is IMPORTANT. Then run `electron-packager . --extra-resource="resources/dict.txt"`. This will take some time, and then there will be an folder called something like `Hangman-win32-x64`, which is where the .exe is. Specifically, `Hangman.exe` is the game.
 
-### Releasing
+## Releasing
 
 This uses `electron-packager` to generate binaries. However, it is VERY IMPORTANT that you ADD `dict.txt` file in the folder with the .exe. Once a relese is published, it may not be modifyed. However, if there is a significant flaw (like a major security bug or a significant part of the game not working) a NOTICE may be added to the downlaod. But the download shouldn't change.
 
-### Issue tracking
+## Issue tracking
 
 If you found something that needs to be ADDED, do NOT add the bug label. Add the to-do label, instead. If you want to try to do it yourself, create a sepearte branch, and send a PR once done. In that case, you may create an issue to track progress, but use the in-progress label instead, noting that you have a branch. Also, issues may be used to track progress on a specific problem. However, I may create a milestone if it involves a lot of things.
 
-### Code style
+## Code style
 
 Contributions should follow this style:  
 > These are guildines, not rules. So if there is a good reason to ignore one (or more) of these, you can. However, I ask that you please put a comment in the code explaining why so that everyone know that it is intentional. Thanks!
