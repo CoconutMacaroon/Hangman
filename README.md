@@ -14,7 +14,7 @@ Go to the releases tab and download the latest releast for your platform.
 
 ### PowerShell installer (recommended)
 
-> Note to devs internally, the script downloads the portable version, installs it to AppData, and adds it to the start menu
+> Note to devs: this script should download the LATEST version of the game. For those of you that really want an old version's installer, it will be in that release. But the version in the source should download (and install) the latest version.
 
 Download the PowerShell installer script from the releases page. Run it. It will go install the app. You will need to reboot your computer for it to show up (although for those advanced users, restarting `explorer` should also work.
 
@@ -39,7 +39,7 @@ PowerShell installre version - Delete the folder `c:\users\<<USERNAME>>\appdata\
 
 ## Releasing
 
-This uses `electron-packager` to generate binaries. However, it is VERY IMPORTANT that you ADD `dict.txt` file in the folder with the .exe. Once a relese is published, it may not be modifyed. However, if there is a significant flaw (like a major security bug or a significant part of the game not working) a NOTICE may be added to the downlaod. But the download shouldn't change.
+This uses `electron-packager` to generate binaries. However, it is VERY IMPORTANT that you ADD `dict.txt` file in the folder with the .exe. Once a relese is published, it may not be modifyed. However, if there is a significant flaw (like a major security bug or a significant part of the game not working) a NOTICE may be added to the downlaod. But the download shouldn't change. Also, update the PowerShell installer with the latest release download.
 
 ## Issue tracking
 
