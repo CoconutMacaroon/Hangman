@@ -41,14 +41,15 @@
                 }
             }
 
-            // check to see if the game is over
-            if(document.getElementById('guessCounter').innerHTML == 0) {
-                alert("You lose! The word was " + word + ".");
-                window.close();
-            }
             if(document.getElementById("guessingWord").innerHTML.replace(/[^-]/g, "").length == 0) {
                 // for the conditional, this was (slightly modified) from https://stackoverflow.com/a/2903549
                 alert("You won!");
+                window.close();
+            }
+
+            // check to see if the game is over
+            if(document.getElementById('guessCounter').innerHTML == 0) {
+                alert("You lose! The word was " + word + ".");
                 window.close();
             }
         }
