@@ -1,7 +1,7 @@
 function getRandomWord() {
     const fs = require("fs");
     try {
-        const data = fs.readFileSync("dict.txt", "utf8");
+        const data = fs.readFileSync("resources/dict.txt", "utf8");
 
         // convert data to array
         return data.split("\n")[
@@ -13,7 +13,7 @@ function getRandomWord() {
         return err;
     }
 }
-String.prototype.replaceAt = function(index, replacement) {
+String.prototype.replaceAt = function (index, replacement) {
     // thanks to https://stackoverflow.com/a/1431113 for this
     // this function/code section was ENTIRELY from there
     return this.substr(0, index) + replacement + this.substr(index + replacement.length);
