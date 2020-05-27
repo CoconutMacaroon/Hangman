@@ -27,8 +27,7 @@ Clone the repo. Go into the repo (in a shell). Run `npm install`. This is IMPORT
 ### Uninstalling
 
 Portable version - delete the folder with the app
-PowerShell installer version - Delete the folder `c:\users\<<USERNAME>>\appdata\local\hangman-game`. Now go to `C:\Users\<<USERNAME>>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs` and delete the `Hangman` file.
-Building from source - Several ways (assuming you used `git clone`) delete the cloned folder. Done... but if you acctually _ran_ the installer (the PowerShell one), not just build from source, see the solution above as well.
+Building from source - It depends. The most common way is delete the folder that you cloned the repo to
 
 ## Releasing
 
