@@ -2,7 +2,7 @@ cd $home
 cd appdata\local 
 mkdir hangman-game 
 cd hangman-game 
-iwr -outf hangman.zip https://github.com/CoconutMacaroon/Hangman/releases/download/v1.1/Hangman-Win-x64.zip 
+iwr -outf hangman.zip https://github.com/CoconutMacaroon/Hangman/releases/download/1.2/Hangman.zip
 Expand-Archive Hangman.zip -Force
 cd Hangman 
 
