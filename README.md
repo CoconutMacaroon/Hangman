@@ -12,14 +12,6 @@ Pull requests are always welcome. However, for bigger changes, consider making a
 
 Go to the releases tab and download the latest releast for your platform.
 
-### PowerShell installer (recommended)
-
-> Note to devs: this script should download the LATEST version of the game. For those of you that really want an old version's installer, it will be in that release. But the version in the source should download (and install) the latest version.
-
-Download the PowerShell installer script from the releases page. Run it. It will go install the app. You will need to reboot your computer for it to show up (although for those advanced users, restarting `explorer` should also work.
-
-> 🔒 Note about the script: Not everyone is OK with downloading and running a script from online. A few things to note here: (1) you can open it in a text editor (like Notepad) to see exactly what it does before running it. (2) You can always compare it against the version in the repo (although you might notice slight changes, as the repo always has the latest version, especially if you use an older release. (3) If you still don't want to, you can download the portable version, and install it manually by copying and creating shortcuts completely without the PowerShell script. That said, it is just to assist in installation.)
-
 ### Running from source
 
 > NOTE: This is always the latest changes, so it is NOT recomended if you don't have experiance with npm/node.js. This is for running it via `npm`.
