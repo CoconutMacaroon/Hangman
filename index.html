@@ -22,7 +22,7 @@
         
         document.getElementById('guessCounter').innerHTML = 10
         document.getElementById("guessingWord").innerHTML = "-".repeat(word.length - 1);
-
+        function loseLogic(){if(document.getElementById('guessCounter').innerHTML==0){alert("You lose! The word was " + word + ".");window.close();}}
         function buttonClickLogic() {
             // disable the button
             this.disabled = true;
@@ -48,42 +48,38 @@
             }
 
             // check to see if the game is over
-            if(document.getElementById('guessCounter').innerHTML == 0) {
-                alert("You lose! The word was " + word + ".");
-                window.close();
-            }
         }
     </script>
     Guess a letter:<br>
     <!-- This contains the buttons that go with the letters -->
     <div>
         <!-- To add some information, `buttonClickLogic.bind(this)() calls that function in the context of the button, in other words, it calls that function as if the code was directly in the button element. Also, although modified to fit this, thanks to https://stackoverflow.com/a/20635010 for explainning how to not have the code in every single button (and make it a function). -->
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">A</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">B</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">C</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">D</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">E</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">F</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">G</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">H</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">I</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">J</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">K</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">L</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">M</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">N</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">O</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">P</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">Q</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">R</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">S</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">T</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">U</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">V</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">W</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">X</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">Y</button>
-        <button class="letterButton" onclick="buttonClickLogic.bind(this)();">Z</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">A</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">B</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">C</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">D</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">E</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">F</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">G</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">H</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">I</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">J</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">K</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">L</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">M</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">N</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">O</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">P</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">Q</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">R</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">S</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">T</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">U</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">V</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">W</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">X</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">Y</button>
+        <button class="letterButton" onclick="buttonClickLogic.bind(this)();loseLogic()">Z</button>
     </div>
 </body>
 </html>
