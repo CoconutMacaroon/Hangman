@@ -56,5 +56,6 @@ This is because the zip doesn't contain the `dict.txt` file needed for picking w
 
 ### Other
 #### PowerShell installer doesn't work due to execution polocy
-> This installer has been since removed
+> This installer has been since removed  
+
 No workaround. Download the portable version instead.
