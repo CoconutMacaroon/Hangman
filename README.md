@@ -8,26 +8,9 @@ Pull requests are always welcome. However, for bigger changes, consider making a
 
 ## Downloading
 
-### Pre-built binaries (portable)
-
-Go to the releases tab and download the latest releast for your platform.
-
-### Running from source
-
-> NOTE: This is always the latest changes, so it is NOT recomended if you don't have experiance with npm/node.js. This is for running it via `npm`.
-
-Clone the repo. Go into the repo (in a shell). Run `npm install` and run `npm start`. This will run the app.
-
 ### Building from source
 
-> NOTE: This is always the latest changes, so it is NOT recomended if you don't have experiance with npm/node.js. This is also how to BUILD this into a executable, not run it from source.
-
-Clone the repo. Go into the repo (in a shell). Run `npm install`. This is IMPORTANT. Then run `electron-packager . --extra-resource="resources/dict.txt"`. This will take some time, and then there will be an folder called something like `Hangman-win32-x64`, which is where the .exe is. Specifically, `Hangman.exe` is the game.
-
-### Uninstalling
-
-Portable version - delete the folder with the app
-Building from source - It depends. The most common way is delete the folder that you cloned the repo to
+> NOTE: This needs a shell, so it is NOT recomended if you don't have experiance with npm/node.js. Clone the repo. Go into the repo (in a shell). Run `npm start`.
 
 ## Releasing
 
