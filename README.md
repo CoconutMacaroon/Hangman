@@ -12,7 +12,7 @@ Pull requests are always welcome. However, for bigger changes, consider making a
 
 > NOTE: This needs a shell, so it is NOT recomended if you don't have experiance with npm/node.js.
 
-Clone the repo, with `git clone https://github.com/CoconutMacaroon/Hangman`. Go into the repo (in a shell). Run `npm start`.
+Download node.js from https://nodejs.org/en/download/. Clone the repo, with `git clone https://github.com/CoconutMacaroon/Hangman`. Go into the repo (in a shell). Run `npm install electron -g`. Then run `npm start`.
 
 ## Releasing
 
