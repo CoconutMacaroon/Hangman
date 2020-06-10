@@ -10,7 +10,9 @@ Pull requests are always welcome. However, for bigger changes, consider making a
 
 ### Building from source
 
-> NOTE: This needs a shell, so it is NOT recomended if you don't have experiance with npm/node.js. Clone the repo. Go into the repo (in a shell). Run `npm start`.
+> NOTE: This needs a shell, so it is NOT recomended if you don't have experiance with npm/node.js.
+
+Clone the repo, with `git clone https://github.com/CoconutMacaroon/Hangman`. Go into the repo (in a shell). Run `npm start`.
 
 ## Releasing
 
