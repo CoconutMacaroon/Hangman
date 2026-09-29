@@ -7,6 +7,6 @@
         "start": "electron ."
     },
     "dependencies": {
-        "electron": "^43.2.0"
+        "electron": "^44"
     }
 }
